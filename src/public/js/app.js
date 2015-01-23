@@ -20,5 +20,4 @@ require([
 	'ApplicationRouter'
 ], function() {
 	
-	// console.log('hello backbone');
 });

@@ -6,7 +6,6 @@ define([
 
     /**
      * Main Application object
-     * @type {Object}
      */
     window.App = {
 
@@ -59,8 +58,6 @@ define([
 
                 if(typeof this.currentActiveView.transitionOut == "function") {
                     this.currentActiveView.transitionOut();
-
-                    // Transition:transitionOutComplete
                 }
                 else {
                     this.currentActiveView.remove();   
@@ -69,7 +66,6 @@ define([
             
             if(ViewObject && typeof ViewObject == "object") {
 
-                // console.log(ViewObject.transitions);            
                 this.$el.append(ViewObject.$el);
 
                 if(typeof ViewObject.transitionIn == "function") {
