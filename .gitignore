@@ -2,3 +2,7 @@
 *.iml
 .DS_Store
 src/public/components/
+node_modules
+npm-debug.log
+.sass-cache
+src/public/css
