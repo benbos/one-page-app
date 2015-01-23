@@ -5,12 +5,6 @@ define([
 
 	return Backbone.View.extend({
 
-		// initialize: function() {
-		// 	_.bindAll(this, 'transitionIn','transitionInComplete');
-
-		// 	console.log('Base Init');
-		// },
-
 		transitionIn: function() {
 
 			_.bindAll(this, 'transitionInComplete');
@@ -43,7 +37,6 @@ define([
 		},
 
 		transitionOutComplete: function() {
-			// Backbone.trigger('Transition:transitionOutComplete', this);
 			
 			this.trigger('Transition:transitionOutComplete');
 

@@ -1,12 +1,12 @@
 requirejs.config({
-	baseUrl: '/js/app',
+	baseUrl: '/js',
 	paths: {
-		'jquery': '../../components/jquery/dist/jquery',	
-		'underscore': '../../components/underscore/underscore',	
-		'backbone': '../../components/backbone/backbone',
-		'hbs': '../../components/require-handlebars-plugin/hbs',
-		'handlebars': '../../components/require-handlebars-plugin/hbs/handlebars',
-		'TweenMax': '../../components/greensock/src/uncompressed/TweenMax'
+		'jquery': '../components/jquery/dist/jquery',	
+		'underscore': '../components/underscore/underscore',	
+		'backbone': '../components/backbone/backbone',
+		'hbs': '../components/require-handlebars-plugin/hbs',
+		'handlebars': '../components/require-handlebars-plugin/hbs/handlebars',
+		'TweenMax': '../components/greensock/src/uncompressed/TweenMax'
 	},
 	hbs: { // optional
 		helpers: true,           
@@ -17,7 +17,7 @@ requirejs.config({
 });
 
 require([
-	'ApplicationRouter'
+	'app/ApplicationRouter'
 ], function() {
 	
 });

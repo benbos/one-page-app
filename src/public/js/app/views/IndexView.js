@@ -1,8 +1,8 @@
 define([
 	'backbone',
 	'TweenMax',
-	'views/BaseView',
-	'hbs!templates/IndexTemplate'
+	'app/views/BaseView',
+	'hbs!app/templates/IndexTemplate'
 ], function(Backbone, TweenMax, BaseView, template) {
 
 	return BaseView.extend({
@@ -22,11 +22,11 @@ define([
 			this.render();
 
 			this.listenToOnce(this, "Transition:transitionInComplete", function () {
-				console.log('indexView - transitionInComplete');
+
 			});
 
 			this.listenToOnce(this, "Transition:transitionOutComplete", function () {
-				console.debug('indexView - transitionOutComplete');
+				
 			});
 		},
 

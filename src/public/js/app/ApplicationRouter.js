@@ -1,7 +1,7 @@
 define([
     'backbone',
-    'views/IndexView',
-    'views/ContactView',
+    'app/views/IndexView',
+    'app/views/ContactView',
 ], function(Backbone, IndexView, ContactView) {
 
     /**

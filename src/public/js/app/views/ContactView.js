@@ -1,7 +1,7 @@
 define([
 	'backbone',
-	'views/BaseView',
-	'hbs!templates/ContactTemplate'
+	'app/views/BaseView',
+	'hbs!app/templates/ContactTemplate'
 ], function(Backbone, BaseView, template) {
 
 	return BaseView.extend({
@@ -14,11 +14,11 @@ define([
 			this.render();
 
 			this.listenToOnce(this, "Transition:transitionInComplete", function () {
-				console.log('contactView - transitionInComplete');
+
 			});
 
 			this.listenToOnce(this, "Transition:transitionOutComplete", function () {
-				console.debug('contactView - transitionOutComplete');
+				
 			});
 		},
 
