@@ -6,8 +6,7 @@ requirejs.config({
 		'backbone': '../../components/backbone/backbone',
 		'hbs': '../../components/require-handlebars-plugin/hbs',
 		'handlebars': '../../components/require-handlebars-plugin/hbs/handlebars',
-		'TweenMax': '../../components/greensock/src/uncompressed/TweenMax',
-		'SplitText': '../../components/greensock/src/plugins/TextPlugin'
+		'TweenMax': '../../components/greensock/src/uncompressed/TweenMax'
 	},
 	hbs: { // optional
 		helpers: true,           
