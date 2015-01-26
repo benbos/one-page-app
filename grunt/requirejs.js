@@ -1,15 +1,19 @@
+/* global module:false */
+"use strict";
+
+/**
+ * Requirejs config
+ * @description compiles requirejs apps.
+ * @type {Object}
+ */
 module.exports = {
     compile: {
         options: {
-            //  name: "./src/public/components/almond/almond.js",
-            // name: "/src/public/js/app.js",
-            name: 'app',
+            name: "app",
             baseUrl: "src/public/js",
             mainConfigFile: "src/public/js/app.js",
-            out: ".tmp/js/app.min.js"
-        },
-        paths: {
-            jquery: 'components/jquery/jquery'
+            out: "dist/public/js/app.min.js",
+            preserveLicenseComments: false
         }
     }
 };

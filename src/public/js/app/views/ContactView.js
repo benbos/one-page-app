@@ -1,12 +1,15 @@
+/* global define:false */
+"use strict";
+
 define([
-	'backbone',
-	'app/views/BaseView',
-	'hbs!app/templates/ContactTemplate'
+	"backbone",
+	"app/views/BaseView",
+	"hbs!app/templates/ContactTemplate"
 ], function(Backbone, BaseView, template) {
 
 	return BaseView.extend({
 
-		className: 'view contact-view', 
+		className: "view contact-view", 
 
 		transitions: true,
 
@@ -29,9 +32,9 @@ define([
 
 			return this.$el;
 
-			// console.log('render');
+			// console.log("render");
 			// 
-			// $('#app').append(this.$el.html());
+			// $("#app").append(this.$el.html());
 		}
 	});
 

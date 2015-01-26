@@ -1,4 +1,7 @@
+/* global module:false */
+"use strict";
+
 module.exports = {
-    dist: ['dist/'],
-    temp: ['.tmp','.sass-cache']
+    dist: ["dist/"],
+    temp: [".tmp",".sass-cache"]
 };

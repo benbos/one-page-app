@@ -1,13 +1,16 @@
+/* global define:false,_:false */
+"use strict";
+
 define([
-	'backbone',
-	'TweenMax'
+	"backbone",
+	"TweenMax"
 ], function(Backbone, TweenMax) {
 
 	return Backbone.View.extend({
 
 		transitionIn: function() {
 
-			_.bindAll(this, 'transitionInComplete');
+			_.bindAll(this, "transitionInComplete");
 
 			TweenMax.fromTo(this.$el, 0.4, {
 				opacity: 0,
@@ -21,12 +24,12 @@ define([
 		},
 
 		transitionInComplete: function() {
-			this.trigger('Transition:transitionInComplete');
+			this.trigger("Transition:transitionInComplete");
 		},
 
 		transitionOut: function() {
 
-			_.bindAll(this, 'transitionOutComplete');
+			_.bindAll(this, "transitionOutComplete");
 
 			TweenMax.to(this.$el, 0.4, {
 				opacity: 0,
@@ -38,7 +41,7 @@ define([
 
 		transitionOutComplete: function() {
 			
-			this.trigger('Transition:transitionOutComplete');
+			this.trigger("Transition:transitionOutComplete");
 
 			this.remove();
 		},

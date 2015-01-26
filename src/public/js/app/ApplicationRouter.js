@@ -1,7 +1,10 @@
+/* global define:false,App:false */
+"use strict";
+
 define([
-    'backbone',
-    'app/views/IndexView',
-    'app/views/ContactView',
+    "backbone",
+    "app/views/IndexView",
+    "app/views/ContactView",
 ], function(Backbone, IndexView, ContactView) {
 
     /**
@@ -18,16 +21,16 @@ define([
         Config: false,
 
         initConfig: function() {
-            this.Config = $('body').data('config');
+            this.Config = $("body").data("config");
         },
 
         init: function() {
 
             // Init router
-            new this.Router;
+            new this.Router();
 
             // Init main view instance
-            this.Instance = new this.Extensions.View;
+            this.Instance = new this.Extensions.View();
 
             // Store config
             this.initConfig();
@@ -43,20 +46,22 @@ define([
      */
     App.Extensions.View = Backbone.View.extend({
 
-        el: '#app',
+        el: "#app",
 
         currentActiveView: false,
 
         goto: function(View) {
 
+            var ViewObject = false;
+
             if(View) {
-                var ViewObject = new View;
+                ViewObject = new View();
             }
 
             // First hide current active view
             if(this.currentActiveView) {
 
-                if(typeof this.currentActiveView.transitionOut == "function") {
+                if(typeof this.currentActiveView.transitionOut === "function") {
                     this.currentActiveView.transitionOut();
                 }
                 else {
@@ -64,11 +69,11 @@ define([
                 }
             }
             
-            if(ViewObject && typeof ViewObject == "object") {
+            if(ViewObject && typeof ViewObject === "object") {
 
                 this.$el.append(ViewObject.$el);
 
-                if(typeof ViewObject.transitionIn == "function") {
+                if(typeof ViewObject.transitionIn === "function") {
                     ViewObject.transitionIn();
                 }
 
@@ -84,8 +89,8 @@ define([
 	App.Router = Backbone.Router.extend({
 
 		routes: {
-            '':         'index',
-            'contact':  'contact'
+            "":         "index",
+            "contact":  "contact"
         },
 
         contact: function() {
