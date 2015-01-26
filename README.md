@@ -1,4 +1,4 @@
-Requirements
+Used libs
 =========================================
 * [bower](https://github.com/bower/bower)
 * [grunt](https://github.com/gruntjs/grunt)
@@ -11,3 +11,8 @@ Requirements
 * [backbone](https://github.com/jashkenas/backbone)
 * [greensock-js](https://github.com/greensock/GreenSock-JS/)
 * [handlebars.js](https://github.com/wycats/handlebars.js/)
+
+Installation
+=========================================
+* npm install 
+* bower install
