@@ -1,6 +1,10 @@
 /* global module:false */
 "use strict";
 
+/**
+ * Copy config
+ * @type {Object}
+ */
 module.exports = {
     dist: {
         files: [{

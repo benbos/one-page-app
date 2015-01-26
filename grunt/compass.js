@@ -3,6 +3,7 @@
 
 /**
  * Compass config
+ * @type {Object}
  */
 module.exports = {
     dist: {

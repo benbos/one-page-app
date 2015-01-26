@@ -2,7 +2,8 @@
 "use strict";
 
 /**
-  * Watch config
+ * Watch config
+ * @type {Object}
  */
 module.exports = {
     options: {

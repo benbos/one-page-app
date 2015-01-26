@@ -1,6 +1,10 @@
 /* global module:false */
 "use strict";
 
+/**
+ * Filerev config
+ * @type {Object}
+ */
 module.exports = {
     css: {
         // src: ".tmp/css/*.css",

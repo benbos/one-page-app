@@ -27,14 +27,9 @@ define([
 
 		render: function() {
 
-
 			this.$el.html(template());
 
 			return this.$el;
-
-			// console.log("render");
-			// 
-			// $("#app").append(this.$el.html());
 		}
 	});
 
