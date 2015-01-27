@@ -4,7 +4,7 @@
 define([
     "backbone",
     "app/views/IndexView",
-    "app/views/ContactView",
+    "app/views/ContactView"
 ], function(Backbone, IndexView, ContactView) {
 
     /**
@@ -36,7 +36,7 @@ define([
             this.initConfig();
 
             // Start Backbone history
-            Backbone.history.start({pushState: false});
+            Backbone.history.start({ pushState: false });
         }
 
     };
@@ -54,26 +54,25 @@ define([
 
             var ViewObject = false;
 
-            if(View) {
+            if (View) {
                 ViewObject = new View();
             }
 
             // First hide current active view
-            if(this.currentActiveView) {
+            if (this.currentActiveView) {
 
-                if(typeof this.currentActiveView.transitionOut === "function") {
+                if (typeof this.currentActiveView.transitionOut === "function") {
                     this.currentActiveView.transitionOut();
-                }
-                else {
-                    this.currentActiveView.remove();   
+                } else {
+                    this.currentActiveView.remove();
                 }
             }
-            
-            if(ViewObject && typeof ViewObject === "object") {
+
+            if (ViewObject && typeof ViewObject === "object") {
 
                 this.$el.append(ViewObject.$el);
 
-                if(typeof ViewObject.transitionIn === "function") {
+                if (typeof ViewObject.transitionIn === "function") {
                     ViewObject.transitionIn();
                 }
 
@@ -86,9 +85,9 @@ define([
     /**
      * Main routing
      */
-	App.Router = Backbone.Router.extend({
+    App.Router = Backbone.Router.extend({
 
-		routes: {
+        routes: {
             "":         "index",
             "contact":  "contact"
         },
@@ -97,11 +96,11 @@ define([
             App.Instance.goto(ContactView);
         },
 
-		index: function() {
+        index: function() {
             App.Instance.goto(IndexView);
-		}
+        }
 
-	});
+    });
 
     /**
      * Init main Application object

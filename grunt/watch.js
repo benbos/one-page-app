@@ -11,6 +11,6 @@ module.exports = {
     },
     styles: {
         files: "src/public/sass/**/*.scss",
-        tasks: ["compass"]
+        tasks: [ "compass" ]
     }
 };

@@ -7,10 +7,10 @@
  * @type {Object}
  */
 module.exports = {
-	main : {
-	    src : "dist/public/js/**/*.js",
-	    options : {
-	        inline : true
+	main: {
+	    src: "dist/public/js/**/*.js",
+	    options: {
+	        inline: true
 	    }
 	}
 };

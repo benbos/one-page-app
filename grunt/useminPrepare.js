@@ -8,6 +8,6 @@
 module.exports = {
     html: "src/public/*.html",
     options: {
-    	dest: "dist/public/"
+        dest: "dist/public/"
     }
 };

@@ -7,7 +7,7 @@
  */
 module.exports = {
     dist: {
-        files: [{
+        files: [ {
             cwd: "src/",
             src: [
                 "public/index.html",
@@ -18,7 +18,7 @@ module.exports = {
              ],
             dest: "dist/",
             expand: true
-        }]
+        } ]
     },
     styles: {
         expand: true,

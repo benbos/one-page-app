@@ -2,35 +2,32 @@
 "use strict";
 
 define([
-	"backbone",
-	"app/views/BaseView",
-	"hbs!app/templates/ContactTemplate"
+    "backbone",
+    "app/views/BaseView",
+    "hbs!app/templates/ContactTemplate"
 ], function(Backbone, BaseView, template) {
 
-	return BaseView.extend({
+    return BaseView.extend({
 
-		className: "view contact-view", 
+        className: "view contact-view",
 
-		transitions: true,
+        transitions: true,
 
-		initialize: function() {
-			this.render();
+        initialize: function() {
 
-			this.listenToOnce(this, "Transition:transitionInComplete", function () {
+            this.render();
 
-			});
+            this.listenToOnce(this, "Transition:transitionInComplete", function() {});
 
-			this.listenToOnce(this, "Transition:transitionOutComplete", function () {
-				
-			});
-		},
+            this.listenToOnce(this, "Transition:transitionOutComplete", function() {});
+        },
 
-		render: function() {
+        render: function() {
 
-			this.$el.html(template());
+            this.$el.html(template());
 
-			return this.$el;
-		}
-	});
+            return this.$el;
+        }
+    });
 
 });

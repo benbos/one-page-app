@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     grunt.registerTask("build", [
         "clean:dist",
         "jshint",
+        "jscs",
         "compass",
         "copy:dist",
         "useminPrepare",
@@ -33,6 +34,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-filerev");
     grunt.loadNpmTasks("grunt-contrib-requirejs");
     grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.loadNpmTasks("grunt-jscs");
     // grunt.loadNpmTasks("grunt-contrib-rename");
     grunt.loadNpmTasks("grunt-strip");
     // grunt.loadNpmTasks("grunt-string-replace");

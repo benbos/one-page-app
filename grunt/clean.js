@@ -6,6 +6,6 @@
  * @type {Object}
  */
 module.exports = {
-    dist: ["dist/"],
-    temp: [".tmp",".sass-cache"]
+    dist: [ "dist/" ],
+    temp: [ ".tmp", ".sass-cache" ]
 };

@@ -2,49 +2,47 @@
 "use strict";
 
 define([
-	"backbone",
-	"TweenMax"
+    "backbone",
+    "TweenMax"
 ], function(Backbone, TweenMax) {
 
-	return Backbone.View.extend({
+    return Backbone.View.extend({
 
-		transitionIn: function() {
+        transitionIn: function() {
 
-			_.bindAll(this, "transitionInComplete");
+            _.bindAll(this, "transitionInComplete");
 
-			TweenMax.fromTo(this.$el, 0.4, {
-				opacity: 0,
-				top: -10
-			}, {
-				opacity: 1,
-				top: 0,
-				delay: 0.3,
-				onComplete: this.transitionInComplete
-			});			
-		},
+            TweenMax.fromTo(this.$el, 0.4, {
+                opacity: 0,
+                top: -10
+            }, {
+                opacity: 1,
+                top: 0,
+                delay: 0.3,
+                onComplete: this.transitionInComplete
+            });
+        },
 
-		transitionInComplete: function() {
-			this.trigger("Transition:transitionInComplete");
-		},
+        transitionInComplete: function() {
+            this.trigger("Transition:transitionInComplete");
+        },
 
-		transitionOut: function() {
+        transitionOut: function() {
 
-			_.bindAll(this, "transitionOutComplete");
+            _.bindAll(this, "transitionOutComplete");
 
-			TweenMax.to(this.$el, 0.4, {
-				opacity: 0,
-				top: -10, 
-				onComplete: this.transitionOutComplete
-			});		
+            TweenMax.to(this.$el, 0.4, {
+                opacity: 0,
+                top: -10,
+                onComplete: this.transitionOutComplete
+            });
 
-		},
+        },
 
-		transitionOutComplete: function() {
-			
-			this.trigger("Transition:transitionOutComplete");
+        transitionOutComplete: function() {
+            this.trigger("Transition:transitionOutComplete");
+            this.remove();
+        }
 
-			this.remove();
-		},
-
-	});
+    });
 });

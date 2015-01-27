@@ -7,14 +7,10 @@
  */
 module.exports = {
     css: {
-        // src: ".tmp/css/*.css",
-        src: "dist/public/css/*.css",
-        // dest: "dist/public/css"
+        src: "dist/public/css/*.css"
     },
     js: {
         src: "dist/public/js/**/*.js"
-        // src: ".tmp/js/**/*.js",
-        // dest: "dist/public/js"
     },
     images: {
         src: "dist/public/img/*.{jpg,png,gif}"
