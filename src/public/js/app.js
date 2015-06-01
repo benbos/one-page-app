@@ -20,5 +20,5 @@ requirejs.config({
 });
 
 require([
-	"app/ApplicationRouter"
+	"app/ApplicationInit"
 ], function() {});
